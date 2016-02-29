@@ -12,6 +12,7 @@ angular.module('codeDojoApp', [
   'ui.bootstrap',
   'validation.match',
   'ngAnimate',
+  'ui.ace'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
