@@ -1,15 +1,18 @@
-<!-- <header class="hero-unit" id="banner">
+<header class="hero-unit" id="banner">
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+    <h1>Code Dojo</h1>
+    <p class="lead">Click 'Begin Session' below to collaborate</p>
   </div>
-</header> -->
+</header>
 <main>
 
   <div ui-ace></div>
   <div>
-    <button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
+    <button id="start-togetherjs" type="button"
+     onclick="TogetherJS(this); return false"
+     data-end-togetherjs-html="End Session">
+      Begin Session
+</button>
   </div>
 </main>
 
