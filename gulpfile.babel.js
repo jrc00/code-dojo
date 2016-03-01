@@ -599,7 +599,7 @@ gulp.task('test:e2e', ['env:all', 'env:test', 'start:server', 'webdriver_update'
 // heroku
 gulp.task('serveprod', function() {
   connect.server({
-    root: [your_project_path],
+    root: '/',
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
