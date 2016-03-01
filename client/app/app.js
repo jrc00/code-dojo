@@ -20,3 +20,4 @@ angular.module('codeDojoApp', [
 
     $locationProvider.html5Mode(true);
   });
+

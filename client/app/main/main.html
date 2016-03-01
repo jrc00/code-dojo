@@ -6,7 +6,18 @@
 </header>
 <main>
 
-  <div ui-ace></div>
+  <div ui-ace="{
+      useWrapMode : true,
+      showGutter: true,
+      theme:'github',
+      mode: 'javascript'
+    }" >// Code goes here...</div>
+
+    <section ng-controller="AceCtrl">
+      <div ui-ace="aceOption" ng-model="aceModel"></div>Choose Language
+      <select ng-model="mode" ng-options="m for m in modes" ng-change="modeChanged()"></select>
+    </section>
+
   <div>
     <button id="start-togetherjs" type="button"
      onclick="TogetherJS(this); return false"
