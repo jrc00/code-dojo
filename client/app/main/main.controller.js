@@ -30,6 +30,7 @@ class MainController {
   }
 }
 
+
 angular.module('codeDojoApp')
   .controller('MainController', MainController);
 

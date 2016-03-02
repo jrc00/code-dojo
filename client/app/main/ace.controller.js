@@ -1,6 +1,6 @@
 function AceCtrl($scope) {
 // The modes
-  $scope.modes = ['Javascript', 'Ruby', 'Markdown'];
+  $scope.modes = ['Scheme', 'XML', 'Javascript'];
   $scope.mode = $scope.modes[0];
 
 
@@ -18,7 +18,11 @@ function AceCtrl($scope) {
   };
 
   // Initial code content...
-  $scope.aceModel = '// Javascript code in here.\n' +
+  $scope.aceModel = ';; Scheme code in here.\n' +
+    '(define (double x)\n\t(* x x))\n\n\n' +
+    '<!-- XML code in here. -->\n' +
+    '<root>\n\t<foo>\n\t</foo>\n\t<bar/>\n</root>\n\n\n' +
+    '// Javascript code in here.\n' +
     'function foo(msg) {\n\tvar r = Math.random();\n\treturn "" + r + " : " + msg;\n}';
 
 }
