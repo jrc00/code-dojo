@@ -1,9 +1,30 @@
+.flex-container {
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-together.js {
+
+}
+
 .ace_editor {
 height: 350px;
 }
 
 .thing-form {
   margin: 20px 0;
+}
+
+.language {
+
 }
 
 #banner {

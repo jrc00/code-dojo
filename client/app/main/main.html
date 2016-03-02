@@ -4,6 +4,36 @@
     <p class="lead">Click 'Begin Session' below to collaborate</p>
   </div>
 </header>
+
+  <div class="flex-container">
+    <button id="start-togetherjs" class="btn btn-primary" type="button"
+     onclick="TogetherJS(this); return false"
+     data-end-togetherjs-html="End Session">
+      Begin Session
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header">Choose a Problem:</h3>
+        <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings">
+          <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="main.deleteThing(thing)">&times;</button></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="thing-form">
+      <label>Add your own problems:</label>
+      <p class="input-group">
+        <input type="text" class="form-control" placeholder="Add a new problem here." ng-model="main.newThing">
+        <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
+      </span>
+      </p>
+    </form>
+  </div>
+
 <main>
 
   <div ui-ace="{
@@ -13,18 +43,11 @@
       mode: 'javascript'
     }" >// Code goes here...</div>
 
-    <section ng-controller="AceCtrl">
+    <section class="language" ng-controller="AceCtrl">
       <div ui-ace="aceOption" ng-model="aceModel"></div>Choose Language
       <select ng-model="mode" ng-options="m for m in modes" ng-change="modeChanged()"></select>
     </section>
 
-  <div>
-    <button id="start-togetherjs" type="button"
-     onclick="TogetherJS(this); return false"
-     data-end-togetherjs-html="End Session">
-      Begin Session
-</button>
-  </div>
 </main>
 
 
