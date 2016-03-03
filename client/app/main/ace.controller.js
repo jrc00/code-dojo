@@ -27,5 +27,4 @@ function AceCtrl($scope) {
     '// Javascript code in here.\n' +
     'function foo(msg) {\n\tvar r = Math.random();\n\treturn "" + r + " : " + msg;\n}';
 
-  })
-}
+  });
