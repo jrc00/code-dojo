@@ -1,4 +1,4 @@
-angular.module('codeDojoapp')
+angular.module('codeDojoApp')
 
 function AceCtrl($scope) {
     // The modes
