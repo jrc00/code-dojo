@@ -1,5 +1,7 @@
+angular.module('codeDojoapp')
+
 function AceCtrl($scope) {
-// The modes
+    // The modes
   $scope.modes = ['Scheme', 'XML', 'Javascript'];
   $scope.mode = $scope.modes[0];
 
@@ -25,4 +27,5 @@ function AceCtrl($scope) {
     '// Javascript code in here.\n' +
     'function foo(msg) {\n\tvar r = Math.random();\n\treturn "" + r + " : " + msg;\n}';
 
+  })
 }

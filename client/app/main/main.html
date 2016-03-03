@@ -43,7 +43,7 @@
       mode: 'javascript'
     }" >// Code goes here...</div>
 
-    <section class="language" ng-controller="AceCtrl">
+    <section class="language" ng-controller="AceCtrl as ctrl">
       <div ui-ace="aceOption" ng-model="aceModel"></div>Choose Language
       <select ng-model="mode" ng-options="m for m in modes" ng-change="modeChanged()"></select>
     </section>
