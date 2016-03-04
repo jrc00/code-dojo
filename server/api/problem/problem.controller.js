@@ -1,16 +1,16 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
- * GET     /api/things              ->  index
- * POST    /api/things              ->  create
- * GET     /api/things/:id          ->  show
- * PUT     /api/things/:id          ->  update
- * DELETE  /api/things/:id          ->  destroy
+ * GET     /api/problems              ->  index
+ * POST    /api/problems              ->  create
+ * GET     /api/problems/:id          ->  show
+ * PUT     /api/problems/:id          ->  update
+ * DELETE  /api/problems/:id          ->  destroy
  */
 
 'use strict';
 
 import _ from 'lodash';
-import Thing from './thing.model';
+import Problem from './problem.model';
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
@@ -59,43 +59,61 @@ function handleError(res, statusCode) {
   };
 }
 
-// Gets a list of Things
+// Gets a list of Problems
 export function index(req, res) {
-  Thing.findAsync()
+  Problem.findAsync()
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Gets a single Thing from the DB
+// Gets a single Problem from the DB
 export function show(req, res) {
-  Thing.findByIdAsync(req.params.id)
+  Problem.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Creates a new Thing in the DB
+// // Creates a new Problem in the DB
+// export function create(req, res) {
+//   Problem.createAsync(req.body)
+//     .then(respondWithResult(res, 201))
+//     .catch(handleError(res));
+// }
+// Creates a new Problem in the DB
 export function create(req, res) {
-  Thing.createAsync(req.body)
-    .then(respondWithResult(res, 201))
-    .catch(handleError(res));
+  console.log('problem.controller:create called with ', req.body);
+  console.log('req.user:', req.user.email);
+  // if (!req.user) {
+  //   console.log('req has no user');
+  //   return res.status(404).send('Please log in to add new problems.');
+  // }
+    return Problem.create({
+      name: req.body.name,
+      info: req.body.info,
+      user: req.user
+    }).then(function(savedProblem) {
+      console.log('saved problem:', savedProblem);
+    })
+  .then(respondWithResult(res, 201))
+  .catch(handleError(res));
 }
 
-// Updates an existing Thing in the DB
+// Updates an existing Problem in the DB
 export function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  Thing.findByIdAsync(req.params.id)
+  Problem.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
 
-// Deletes a Thing from the DB
+// Deletes a Problem from the DB
 export function destroy(req, res) {
-  Thing.findByIdAsync(req.params.id)
+  Problem.findByIdAsync(req.params.id)
     .then(handleEntityNotFound(res))
     .then(removeEntity(res))
     .catch(handleError(res));
