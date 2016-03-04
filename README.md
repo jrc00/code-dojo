@@ -9,7 +9,7 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 ## Links
 Code Dojo on the web: [https://my-code-dojo.herokuapp.com/](https://my-code-dojo.herokuapp.com/)
-[Trello Board](https://trello.com/b/Tn8xxsPW)
+   [Trello Board](https://trello.com/b/Tn8xxsPW)
 
 ## Project Notes
 ### User Stories
