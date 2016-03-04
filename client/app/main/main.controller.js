@@ -4,9 +4,13 @@
 
 class MainController {
 
-  constructor($http, $scope, socket) {
+  constructor($http, $scope, socket, Auth) {
     this.$http = $http;
     this.awesomeProblems = [];
+
+    this.isLoggedIn = Auth.isLoggedIn;
+    this.isAdmin = Auth.isAdmin;
+    this.getCurrentUser = Auth.getCurrentUser;
 
     $http.get('/api/problems').then(response => {
       this.awesomeProblems = response.data;
