@@ -19,7 +19,8 @@ to accelerate my learning.
 2. As a hiring manager for remote developers, I want to be able to give programming
 challenges to applicants remotely.
 
-
+### Wireframes
+![wireframe](client/assets/images/Student.png)
 [Wireframes + ERD]()
 
 ## Technologies Used
