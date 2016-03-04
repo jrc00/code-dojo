@@ -1,6 +1,7 @@
 # Code Dojo
 
 A Place to Practice the Art of Code
+
 Project 4 | General Assembly WDI | Atlanta, GA
 March 4, 2016
 
@@ -12,9 +13,12 @@ Code Dojo on the web: [https://my-code-dojo.herokuapp.com/](https://my-code-dojo
 
 ## Project Notes
 ### User Stories
-#1
-#2
-#3
+1. As a junior developer, I want to be able to pair program with other developers
+to accelerate my learning.
+
+2. As a hiring manager for remote developers, I want to be able to give programming
+challenges to applicants remotely.
+
 
 [Wireframes + ERD]()
 
