@@ -6,7 +6,7 @@
 </header>
 
   <div class="flex-container">
-    <button id="start-togetherjs" class="btn btn-primary" type="button"
+    <button ng-controller="LoginController" ng-disabled="submitted == false" id="start-togetherjs" class="btn btn-primary" type="button"
      onclick="TogetherJS(this); return false"
      data-end-togetherjs-html="End Session">
       Begin Session
