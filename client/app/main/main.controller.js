@@ -20,7 +20,7 @@ class MainController {
 
   addProblem(name, info) {
     if (this.newProblem) {
-      this.$http.post('/api/problems', { name: name }, { info: info });
+      this.$http.post('/api/problems', { name: name, info: info });
       this.newProblem = '';
     }
   }
