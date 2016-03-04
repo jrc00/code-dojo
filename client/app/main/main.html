@@ -37,7 +37,8 @@
 
 <main>
 
-  <section class="language" ng-controller="AceCtrl as ctrl">
+  <section class="language" ng-controller="AceCtrl as ctrl">    <img src="../assets/images/ninja.svg" alt="ninja">
+
     <div ui-ace="aceOption" ng-model="aceModel"></div>Choose Language
     <select ng-model="mode" ng-options="m for m in modes" ng-change="modeChanged()"></select>
   </section>

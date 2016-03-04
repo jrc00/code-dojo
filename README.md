@@ -1,6 +1,25 @@
-# code-dojo
+# Code Dojo
+
+A Place to Practice the Art of Code
+Project 4 | General Assembly WDI | Atlanta, GA
+March 4, 2016
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
+
+## Links
+Code Dojo on the web: [https://my-code-dojo.herokuapp.com/](https://my-code-dojo.herokuapp.com/)
+[Trello Board](https://trello.com/b/Tn8xxsPW)
+
+## Project Notes
+### User Stories
+#1
+#2
+#3
+
+[Wireframes + ERD]()
+
+## Technologies Used
+
 
 ## Getting Started
 
