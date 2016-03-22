@@ -20,7 +20,7 @@ to accelerate my learning.
 challenges to applicants remotely.
 
 ### Wireframes
-![wireframe](client/assets/images/Student.png)
+![wireframe](client/assets/images/code-dojo.png)
 [Wireframes + ERD]()
 
 ## Technologies Used
