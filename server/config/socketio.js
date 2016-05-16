@@ -1,6 +1,3 @@
-/**
- * Socket.io configuration
- */
 'use strict';
 
 import config from './environment';

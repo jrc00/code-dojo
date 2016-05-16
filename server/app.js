@@ -1,7 +1,3 @@
-/**
- * Main application file
- */
-
 'use strict';
 
 import express from 'express';
